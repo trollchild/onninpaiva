@@ -1,18 +1,26 @@
 
 from django.shortcuts import redirect, render
+
 from .models import *
 from django.conf import settings
 
-    #the data here comes from the urls.py
 
-# Create your views here.
-def comming_soon(request):
 
-    #for example here I send the e-mail to the template
-    email = "kimmo.paananen@gmail.com"
+def home(request):
+    return render(request, "index.html")
 
-    context = {
-        # add here what you want to pass in to the template
-    "email": email,
-    }
-    return render(request, 'comming-soon.html', context)
+
+def events(request):
+    return render(request, "events.html")
+
+
+def blog(request):
+    return render(request, "blog.html")
+
+
+def gallery(request):
+    return render(request, "gallery.html")
+
+
+def contact(request):
+    return render(request, "contact.html")

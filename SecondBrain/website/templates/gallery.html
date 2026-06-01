@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gallery — Ravintola Onnin Päivä{% endblock %}
+
+{% block content %}
+<br>
+
+<section class="container">
+
+    <div class="section-head" style="justify-content:center">
+        <h2 style="font-size:42px">GALLERY</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+        <a class="gitem reveal" href="{% static 'images/hero-stage.jpg' %}">
+            <img src="{% static 'images/hero-stage.jpg' %}" alt="">
+        </a>
+
+        <a class="gitem reveal" href="{% static 'images/event-dj.jpg' %}">
+            <img src="{% static 'images/event-dj.jpg' %}" alt="">
+        </a>
+
+        <a class="gitem reveal" href="{% static 'images/event-band.jpg' %}">
+            <img src="{% static 'images/event-band.jpg' %}" alt="">
+        </a>
+
+        <a class="gitem reveal" href="{% static 'images/event-karaoke.jpg' %}">
+            <img src="{% static 'images/event-karaoke.jpg' %}" alt="">
+        </a>
+
+        <a class="gitem reveal" href="{% static 'images/event-billiards.jpg' %}">
+            <img src="{% static 'images/event-billiards.jpg' %}" alt="">
+        </a>
+
+        <a class="gitem reveal" href="{% static 'images/blog-cocktails.jpg' %}">
+            <img src="{% static 'images/blog-cocktails.jpg' %}" alt="">
+        </a>
+
+        <a class="gitem reveal" href="{% static 'images/venue-window.jpg' %}">
+            <img src="{% static 'images/venue-window.jpg' %}" alt="">
+        </a>
+
+        <a class="gitem reveal" href="{% static 'images/venue-terrace.jpg' %}">
+            <img src="{% static 'images/venue-terrace.jpg' %}" alt="">
+        </a>
+
+    </div>
+
+    <div class="gallery-strip">
+
+        <img src="{% static 'images/venue-window.jpg' %}" alt="">
+        <img src="{% static 'images/event-billiards.jpg' %}" alt="">
+        <img src="{% static 'images/event-dj.jpg' %}" alt="">
+        <img src="{% static 'images/venue-terrace.jpg' %}" alt="">
+        <img src="{% static 'images/hero-stage.jpg' %}" alt="">
+
+    </div>
+
+</section>
+
+<br>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+
+# === Virtualenv ===
+env/
+venv/
+ENV/
+*.venv
+.env
+
+# === IDE / Editors ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Logs ===
+*.log
+*.out
+*.err
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Django / Flask / Web Apps ===
+# Database files
+*.sqlite3
+*.db
+
+# Local settings
+settings_local.py
+.env
+.env.*
+
+# Static & Media (don’t overwrite user uploads!)
+/staticfiles/
+/media/
+/uploads/
+
+# Caches
+*.cache
+*.pot
+*.mo
+*.pyc
+
+# === Node / Frontend (if used) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+build/
+
+# === Deployment ===
+/secrets/
+/certs/
+/backups/
