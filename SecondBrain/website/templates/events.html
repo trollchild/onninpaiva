@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Events — Ravintola Onnin Päivä{% endblock %}
+
+{% block content %}
+
+<br>
+
+<section class="container">
+
+    <div class="section-head" style="justify-content:center">
+        <h2 style="font-size:42px">EVENTS</h2>
+    </div>
+
+    <div class="filter-tabs">
+        <button class="active" data-filter="all">All Events</button>
+        <button data-filter="live">Live Music</button>
+        <button data-filter="karaoke">Karaoke</button>
+        <button data-filter="dj">DJ</button>
+        <button data-filter="special">Special</button>
+    </div>
+
+    <div class="evlist">
+
+        <article class="evcard reveal" data-cat="dj">
+
+            <div class="date-badge">
+                <div class="m">MAY</div>
+                <div class="d">16</div>
+                <div class="w">FRI</div>
+            </div>
+
+            <div class="thumb">
+                <img src="{% static 'images/event-dj.jpg' %}" alt="">
+            </div>
+
+            <div>
+                <h4>DJ MIKE NIGHT</h4>
+                <div class="time">23:00 - 02:00</div>
+                <p>The best mixes all night long.</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'contact' %}" class="btn">Book</a>
+            </div>
+
+        </article>
+
+        <article class="evcard reveal" data-cat="live">
+
+            <div class="date-badge">
+                <div class="m">MAY</div>
+                <div class="d">17</div>
+                <div class="w">SAT</div>
+            </div>
+
+            <div class="thumb">
+                <img src="{% static 'images/event-band.jpg' %}" alt="">
+            </div>
+
+            <div>
+                <h4>LIVE BAND</h4>
+                <div class="time">21:30 - 00:00</div>
+                <p>Rock the night with live music.</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'contact' %}" class="btn">Book</a>
+            </div>
+
+        </article>
+
+        <article class="evcard reveal" data-cat="karaoke">
+
+            <div class="date-badge">
+                <div class="m">MAY</div>
+                <div class="d">18</div>
+                <div class="w">SUN</div>
+            </div>
+
+            <div class="thumb">
+                <img src="{% static 'images/event-karaoke.jpg' %}" alt="">
+            </div>
+
+            <div>
+                <h4>KARAOKE NIGHT</h4>
+                <div class="time">20:00 - 01:00</div>
+                <p>Grab the mic and be the star!</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'contact' %}" class="btn">Book</a>
+            </div>
+
+        </article>
+
+        <article class="evcard reveal" data-cat="special">
+
+            <div class="date-badge">
+                <div class="m">MAY</div>
+                <div class="d">23</div>
+                <div class="w">FRI</div>
+            </div>
+
+            <div class="thumb">
+                <img src="{% static 'images/event-billiards.jpg' %}" alt="">
+            </div>
+
+            <div>
+                <h4>BILLIARD TOURNAMENT</h4>
+                <div class="time">19:00 - 23:00</div>
+                <p>Join the game and win prizes!</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'contact' %}" class="btn">Book</a>
+            </div>
+
+        </article>
+
+        <article class="evcard reveal" data-cat="live">
+
+            <div class="date-badge">
+                <div class="m">MAY</div>
+                <div class="d">24</div>
+                <div class="w">SAT</div>
+            </div>
+
+            <div class="thumb">
+                <img src="{% static 'images/event-band.jpg' %}" alt="">
+            </div>
+
+            <div>
+                <h4>ACOUSTIC SESSIONS</h4>
+                <div class="time">20:00 - 23:00</div>
+                <p>Intimate acoustic performances.</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'contact' %}" class="btn">Book</a>
+            </div>
+
+        </article>
+
+        <article class="evcard reveal" data-cat="karaoke">
+
+            <div class="date-badge">
+                <div class="m">MAY</div>
+                <div class="d">30</div>
+                <div class="w">FRI</div>
+            </div>
+
+            <div class="thumb">
+                <img src="{% static 'images/event-karaoke.jpg' %}" alt="">
+            </div>
+
+            <div>
+                <h4>HAPPY HOUR KARAOKE</h4>
+                <div class="time">19:00 - 22:00</div>
+                <p>Half-price drinks, full-volume singing.</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'contact' %}" class="btn">Book</a>
+            </div>
+
+        </article>
+
+    </div>
+
+    <div style="text-align:center;margin-top:40px">
+        <a href="#" class="btn btn-solid">View All Events</a>
+    </div>
+
+</section>
+
+<br>
+
+{% endblock %}

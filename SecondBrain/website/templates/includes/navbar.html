@@ -1,0 +1,30 @@
+<header class="site-header">
+    <div class="container nav">
+
+        <a href="{% url 'home' %}" class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M5 4h14l-7 9-7-9zM12 13v7M8 20h8"/>
+            </svg>
+
+            <span>
+                <b>RAVINTOLA</b>
+                <small>ONNIN PÄIVÄ</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle">☰</button>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}" class="active">Home</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+
+        <a href="{% url 'contact' %}#register" class="btn">
+            Login
+        </a>
+
+    </div>
+</header>

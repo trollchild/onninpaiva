@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home — Ravintola Onnin Päivä{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-inner container">
+        <div class="hero-grid">
+
+            <div>
+                <div class="hero-eyebrow">WELCOME TO</div>
+
+                <h1>ONNIN PÄIVÄ</h1>
+
+                <div class="hero-sub">
+                    RESTAURANT &nbsp;•&nbsp; BAR &nbsp;•&nbsp; NIGHTCLUB
+                </div>
+
+                <div class="hero-cats">
+
+                    <div class="cat">
+                        <div class="ico">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                                <path d="M22 44V14l28-6v30"/>
+                                <circle cx="18" cy="46" r="6"/>
+                                <circle cx="46" cy="40" r="6"/>
+                            </svg>
+                        </div>
+                        <span>LIVE MUSIC</span>
+                    </div>
+
+                    <div class="cat">
+                        <div class="ico">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                                <rect x="24" y="8" width="16" height="28" rx="8"/>
+                                <path d="M16 32a16 16 0 0 0 32 0M32 48v8M22 56h20"/>
+                            </svg>
+                        </div>
+                        <span>KARAOKE</span>
+                    </div>
+
+                    <div class="cat">
+                        <div class="ico">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <circle cx="32" cy="32" r="20"/>
+                                <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span>BILLIARD</span>
+                    </div>
+
+                    <div class="cat">
+                        <div class="ico">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 12h44L32 38 10 12zM32 38v16M22 54h20M40 12l8-6"/>
+                            </svg>
+                        </div>
+                        <span>COCKTAILS</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-ctas">
+                    <a href="{% url 'events' %}" class="btn btn-solid">View Events</a>
+                    <a href="{% url 'contact' %}" class="btn btn-ghost">Book a Table</a>
+                </div>
+            </div>
+
+            <div class="play-wrap">
+                <button class="play-circle" aria-label="Play video">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <span>PLAY VIDEO</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+<br>
+<div class="container">
+    <div class="tonight reveal">
+
+        <div class="tonight-head">
+            <h3>
+                <em class="text-neon">TONIGHT</em>
+                <span>AT ONNIN PÄIVÄ</span>
+            </h3>
+
+            <a href="{% url 'events' %}" class="btn">View Calendar</a>
+        </div>
+
+        <div class="tonight-grid">
+
+            <div class="tcard">
+                <div class="neon-ico">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                        <rect x="24" y="8" width="16" height="28" rx="8"/>
+                        <path d="M16 32a16 16 0 0 0 32 0M32 48v8M22 56h20"/>
+                    </svg>
+                </div>
+                <h4>KARAOKE NIGHT</h4>
+                <div class="time">21:00</div>
+                <span class="badge"><span class="dot"></span>Live Now</span>
+            </div>
+
+            <div class="tcard">
+                <div class="neon-ico">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M44 8l12 12-6 6-12-12zM38 14L20 32a10 10 0 1 0 12 12l18-18M26 38l4 4"/>
+                    </svg>
+                </div>
+                <h4>LIVE MUSIC</h4>
+                <div class="time">22:00</div>
+                <span class="badge up">Up Next</span>
+            </div>
+
+            <div class="tcard">
+                <div class="neon-ico">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M8 36v-4a24 24 0 0 1 48 0v4"/>
+                        <rect x="8" y="36" width="12" height="16" rx="3"/>
+                        <rect x="44" y="36" width="12" height="16" rx="3"/>
+                    </svg>
+                </div>
+                <h4>DJ MIKE</h4>
+                <div class="time">23:30</div>
+                <span class="badge up">Up Next</span>
+            </div>
+
+            <div class="tcard">
+                <div class="neon-ico">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M10 12h44L32 38 10 12zM32 38v16M22 54h20M40 12l8-6"/>
+                    </svg>
+                </div>
+                <h4>HAPPY HOUR</h4>
+                <div class="time">19:00 – 22:00</div>
+                <span class="badge"><span class="dot"></span>Live Now</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+<section class="container reveal">
+    <div class="section-head">
+        <h2>LATEST <em>NEWS</em></h2>
+        <a href="{% url 'blog' %}" class="btn">View All News</a>
+    </div>
+
+    <div class="cards-3">
+
+        <article class="ncard">
+            <div class="thumb">
+                <img src="{% static 'images/blog-mic.jpg' %}" alt="">
+            </div>
+            <div class="body">
+                <h4>KARAOKE NIGHTS ARE BACK!</h4>
+                <p>Every Thursday, Friday and Saturday.</p>
+                <div class="meta">May 10, 2026</div>
+            </div>
+        </article>
+
+        <article class="ncard">
+            <div class="thumb">
+                <img src="{% static 'images/event-dj.jpg' %}" alt="">
+            </div>
+            <div class="body">
+                <h4>DJ MIKE THIS FRIDAY!</h4>
+                <p>Get ready for the best beats.</p>
+                <div class="meta">May 8, 2026</div>
+            </div>
+        </article>
+
+        <article class="ncard">
+            <div class="thumb">
+                <img src="{% static 'images/blog-cocktails.jpg' %}" alt="">
+            </div>
+            <div class="body">
+                <h4>NEW COCKTAIL MENU</h4>
+                <p>Come try our new summer cocktails.</p>
+                <div class="meta">May 5, 2026</div>
+            </div>
+        </article>
+
+    </div>
+</section>
+<br>
+<section class="container reveal">
+    <div class="section-head">
+        <h2>CUSTOMER <em>REVIEWS</em></h2>
+    </div>
+
+    <div class="reviews-grid">
+        <div class="rcard">
+            <div class="stars">★★★★★</div>
+            <p>"Best nightlife in town! Always great music and atmosphere."</p>
+            <div class="who">— Joni M.</div>
+        </div>
+
+        <div class="rcard">
+            <div class="stars">★★★★★</div>
+            <p>"Amazing cocktails and awesome karaoke nights!"</p>
+            <div class="who">— Sanna K.</div>
+        </div>
+
+        <div class="rcard">
+            <div class="stars">★★★★★</div>
+            <p>"Love this place! Billiards, music and great service."</p>
+            <div class="who">— Ville T.</div>
+        </div>
+    </div>
+</section>
+<br>
+<section class="container reveal">
+    <div class="visit-grid">
+
+        <div class="visit-img">
+            <img src="{% static 'images/venue-signage.png' %}" alt="Onnin Päivä signage">
+        </div>
+
+        <div>
+            <div class="hero-eyebrow">VISIT US</div>
+
+            <h2 style="font-size:42px;margin:12px 0 18px;color:#fff">
+                STEP INSIDE <span class="text-neon">ONNIN PÄIVÄ</span>
+            </h2>
+
+            <p style="color:#cdb8bc;margin-bottom:22px">
+                Tucked into the heart of Littoinen, our lounge glows under neon signage and warm timber.
+                Whether you're here for cocktails on the terrace or dancing till close —
+                the atmosphere is unmistakable.
+            </p>
+
+            <a href="{% url 'contact' %}" class="btn btn-solid">
+                Get Directions
+            </a>
+        </div>
+
+    </div>
+</section>
+<br>
+
+{% endblock %}

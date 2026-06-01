@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog — Ravintola Onnin Päivä{% endblock %}
+
+{% block content %}
+
+<br>
+<section class="container">
+
+    <div class="section-head" style="justify-content:center">
+        <h2 style="font-size:42px">
+            LATEST <em>NEWS</em>
+        </h2>
+    </div>
+
+    <div class="cards-3">
+
+        <article class="ncard reveal">
+            <div class="thumb">
+                <img src="{% static 'images/blog-mic.jpg' %}" alt="">
+            </div>
+
+            <div class="body">
+                <h4>KARAOKE NIGHTS ARE BACK!</h4>
+                <p>Every Thursday, Friday and Saturday — the mic is yours.</p>
+                <div class="meta">May 10, 2026</div>
+            </div>
+        </article>
+
+        <article class="ncard reveal">
+            <div class="thumb">
+                <img src="{% static 'images/event-dj.jpg' %}" alt="">
+            </div>
+
+            <div class="body">
+                <h4>DJ MIKE THIS FRIDAY!</h4>
+                <p>Get ready for the best beats of the season.</p>
+                <div class="meta">May 8, 2026</div>
+            </div>
+        </article>
+
+        <article class="ncard reveal">
+            <div class="thumb">
+                <img src="{% static 'images/blog-cocktails.jpg' %}" alt="">
+            </div>
+
+            <div class="body">
+                <h4>NEW COCKTAIL MENU</h4>
+                <p>Come try our new summer cocktails.</p>
+                <div class="meta">May 5, 2026</div>
+            </div>
+        </article>
+
+        <article class="ncard reveal">
+            <div class="thumb">
+                <img src="{% static 'images/event-band.jpg' %}" alt="">
+            </div>
+
+            <div class="body">
+                <h4>BAND SPOTLIGHT: THE EMBERS</h4>
+                <p>Meet the Finnish indie band lighting up our stage.</p>
+                <div class="meta">April 28, 2026</div>
+            </div>
+        </article>
+
+        <article class="ncard reveal">
+            <div class="thumb">
+                <img src="{% static 'images/event-billiards.jpg' %}" alt="">
+            </div>
+
+            <div class="body">
+                <h4>BILLIARDS LEAGUE OPEN</h4>
+                <p>Sign up for our monthly billiards league.</p>
+                <div class="meta">April 22, 2026</div>
+            </div>
+        </article>
+
+        <article class="ncard reveal">
+            <div class="thumb">
+                <img src="{% static 'images/event-karaoke.jpg' %}" alt="">
+            </div>
+
+            <div class="body">
+                <h4>SUMMER TERRACE OPEN</h4>
+                <p>Sunset cocktails on the terrace are back.</p>
+                <div class="meta">April 18, 2026</div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+<br>
+{% endblock %}
