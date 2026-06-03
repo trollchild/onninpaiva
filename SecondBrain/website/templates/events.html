@@ -1,72 +1,100 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Events — Ravintola Onnin Päivä{% endblock %}
+{% block title %}Tapahtumat — Ravintola Onnin Päivä{% endblock %}
 
 {% block content %}
+
+<style>
+  .campkein-img{
+      object-position: 20% 20%;
+  }
+</style>
 
 <br>
 
 <section class="container">
 
     <div class="section-head" style="justify-content:center">
-        <h2 style="font-size:42px">EVENTS</h2>
+        <h2 style="font-size:42px">Tapahtumat</h2>
     </div>
 
     <div class="filter-tabs">
-        <button class="active" data-filter="all">All Events</button>
-        <button data-filter="live">Live Music</button>
+        <button class="active" data-filter="kaikki">Kaikki tapahtumat</button>
+        <button data-filter="live">Livemusiikki</button>
         <button data-filter="karaoke">Karaoke</button>
-        <button data-filter="dj">DJ</button>
-        <button data-filter="special">Special</button>
+        <button data-filter="muut">Muut tapahtumat</button>
     </div>
 
     <div class="evlist">
 
-        <article class="evcard reveal" data-cat="dj">
+      <article class="evcard reveal" data-cat="live">
 
-            <div class="date-badge">
-                <div class="m">MAY</div>
-                <div class="d">16</div>
-                <div class="w">FRI</div>
-            </div>
+          <div class="date-badge">
+              <div class="m">Kesäkuu</div>
+              <div class="d">13</div>
+              <div class="w">La</div>
+          </div>
 
-            <div class="thumb">
-                <img src="{% static 'images/event-dj.jpg' %}" alt="">
-            </div>
+          <div class="thumb">
+              <img class="campkein-img" src="{% static 'images/onninpaiva.jpg' %}" alt="">
+          </div>
 
-            <div>
-                <h4>DJ MIKE NIGHT</h4>
-                <div class="time">23:00 - 02:00</div>
-                <p>The best mixes all night long.</p>
-            </div>
+          <div>
+              <h4>Avajaiset Lauantaina 13.6.2026</h4>
+              <p>🎉 Rajamäelle avautuu 13.6.2026 uusi kohtaamispaikka! Ravintolan yhteydessä voit nauttia yökerhotunnelmasta, livemusiikista, karaokesta, seurapeleistä ja monesta muusta elämyksestä.</p>
+          </div>
 
-            <div class="actions">
-                <a href="{% url 'contact' %}" class="btn">Book</a>
-            </div>
+          <div class="actions">
+              <a href="{% url 'contact' %}" class="btn">Lisätietoja tulossa</a>
+          </div>
 
-        </article>
+      </article>
 
         <article class="evcard reveal" data-cat="live">
 
             <div class="date-badge">
-                <div class="m">MAY</div>
-                <div class="d">17</div>
-                <div class="w">SAT</div>
+                <div class="m">Kesäkuu</div>
+                <div class="d">13</div>
+                <div class="w">La</div>
             </div>
 
             <div class="thumb">
-                <img src="{% static 'images/event-band.jpg' %}" alt="">
+                <img class="campkein-img" src="{% static 'images/Campkein.jpg' %}" alt="">
             </div>
 
             <div>
-                <h4>LIVE BAND</h4>
-                <div class="time">21:30 - 00:00</div>
-                <p>Rock the night with live music.</p>
+                <h4>Campkein</h4>
+                <div class="time">19:00 - 21:00</div>
+                <p>13.6.2026 esiintyy Campkein rajamäen terassilla!</p>
             </div>
 
             <div class="actions">
-                <a href="{% url 'contact' %}" class="btn">Book</a>
+                <a href="{% url 'contact' %}" class="btn">Lisätietoja tulossa</a>
+            </div>
+
+        </article>
+
+        <article class="evcard reveal" data-cat="muut">
+
+            <div class="date-badge">
+                <div class="m">Kesäkuu</div>
+                <div class="d">13</div>
+                <div class="w">La</div>
+            </div>
+
+            <div class="thumb">
+                <img src="{% static 'images/eemeli.jpg' %}" alt="">
+            </div>
+
+            <div>
+                <h4>Eemeli Rokonen (Elukkamies)</h4>
+                <div class="time">17:00 -</div>
+                <p>13.6.2026 taidenäyttely avajaispäivänä!</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'contact' %}" class="btn">Lisätietoja tulossa</a>
             </div>
 
         </article>
@@ -74,103 +102,33 @@
         <article class="evcard reveal" data-cat="karaoke">
 
             <div class="date-badge">
-                <div class="m">MAY</div>
-                <div class="d">18</div>
-                <div class="w">SUN</div>
+                <div class="m">Kesäkuu</div>
+                <div class="d">13</div>
+                <div class="w">La</div>
             </div>
 
             <div class="thumb">
-                <img src="{% static 'images/event-karaoke.jpg' %}" alt="">
+                <img src="{% static 'images/blog-mic.jpg' %}" alt="">
             </div>
 
             <div>
-                <h4>KARAOKE NIGHT</h4>
-                <div class="time">20:00 - 01:00</div>
-                <p>Grab the mic and be the star!</p>
+                <h4>Karaoke</h4>
+                <div class="time">21:00-03:00</div>
+                <p>Karaoke auki kaikille viikonloppuna!</p>
             </div>
 
             <div class="actions">
-                <a href="{% url 'contact' %}" class="btn">Book</a>
+                <a href="{% url 'contact' %}" class="btn">Lisätietoja tulossa</a>
             </div>
 
         </article>
 
-        <article class="evcard reveal" data-cat="special">
 
-            <div class="date-badge">
-                <div class="m">MAY</div>
-                <div class="d">23</div>
-                <div class="w">FRI</div>
-            </div>
-
-            <div class="thumb">
-                <img src="{% static 'images/event-billiards.jpg' %}" alt="">
-            </div>
-
-            <div>
-                <h4>BILLIARD TOURNAMENT</h4>
-                <div class="time">19:00 - 23:00</div>
-                <p>Join the game and win prizes!</p>
-            </div>
-
-            <div class="actions">
-                <a href="{% url 'contact' %}" class="btn">Book</a>
-            </div>
-
-        </article>
-
-        <article class="evcard reveal" data-cat="live">
-
-            <div class="date-badge">
-                <div class="m">MAY</div>
-                <div class="d">24</div>
-                <div class="w">SAT</div>
-            </div>
-
-            <div class="thumb">
-                <img src="{% static 'images/event-band.jpg' %}" alt="">
-            </div>
-
-            <div>
-                <h4>ACOUSTIC SESSIONS</h4>
-                <div class="time">20:00 - 23:00</div>
-                <p>Intimate acoustic performances.</p>
-            </div>
-
-            <div class="actions">
-                <a href="{% url 'contact' %}" class="btn">Book</a>
-            </div>
-
-        </article>
-
-        <article class="evcard reveal" data-cat="karaoke">
-
-            <div class="date-badge">
-                <div class="m">MAY</div>
-                <div class="d">30</div>
-                <div class="w">FRI</div>
-            </div>
-
-            <div class="thumb">
-                <img src="{% static 'images/event-karaoke.jpg' %}" alt="">
-            </div>
-
-            <div>
-                <h4>HAPPY HOUR KARAOKE</h4>
-                <div class="time">19:00 - 22:00</div>
-                <p>Half-price drinks, full-volume singing.</p>
-            </div>
-
-            <div class="actions">
-                <a href="{% url 'contact' %}" class="btn">Book</a>
-            </div>
-
-        </article>
 
     </div>
 
     <div style="text-align:center;margin-top:40px">
-        <a href="#" class="btn btn-solid">View All Events</a>
+        <a href="/tapahtumat" class="btn btn-solid">Kaikki tapahtumat</a>
     </div>
 
 </section>

@@ -6,9 +6,9 @@ from . import views
 
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("events/", views.events, name="events"),
-    path("blog/", views.blog, name="blog"),
-    path("gallery/", views.gallery, name="gallery"),
-    path("contact/", views.contact, name="contact"),
+    path('', views.home, name='home'),
+    path('tapahtumat/', views.events, name='events'),
+    path('ajankohtaista/', views.blog, name='blog'),
+    path('kuvagalleria/', views.gallery, name='gallery'),
+    path('yhteystiedot/', views.contact, name='contact'),
 ]
