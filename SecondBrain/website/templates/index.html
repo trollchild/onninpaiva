@@ -6,24 +6,102 @@
 {% block content %}
 
 <style>
-  .campkein-img{
-      object-position: 20% 20%;
-  }
+
+.campkein-img{
+    object-position: 20% 20%;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .hero h1{
+        font-size:42px;
+        text-align:center;
+    }
+
+    .hero h2{
+        font-size:24px;
+        text-align:center;
+    }
+
+    .hero-sub{
+        text-align:center;
+    }
+
+    .hero-eyebrow{
+        text-align:center;
+    }
+
+    .hero-cats{
+        justify-content:center;
+        gap:12px;
+    }
+
+    .hero-ctas{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .hero-ctas .btn{
+        width:100%;
+    }
+
+    .section-head{
+        flex-direction:column;
+        gap:16px;
+        text-align:center;
+    }
+
+    .tonight-head{
+        flex-direction:column;
+        gap:16px;
+        text-align:center;
+    }
+
+    .visit-img img{
+        width:100%;
+        height:auto;
+    }
+
+    .ncard img{
+        width:100%;
+        height:auto;
+    }
+
+    .play-wrap{
+        margin-top:20px;
+        text-align:center;
+    }
+
+    .hero-cats{
+        display:flex;
+        flex-wrap:wrap;
+    }
+}
+
 </style>
 
 <section class="hero">
     <div class="hero-inner container">
-        <div class="hero-grid">
 
-            <div>
-                <div class="hero-eyebrow">TERVETULOA VIIHTYMÄÄN!
+        <div class="row align-items-center g-4">
 
+            <div class="col-12 col-lg-8 ">
+
+                <div class="hero-eyebrow">
+                    TERVETULOA VIIHTYMÄÄN!
                 </div>
-                <h2 style="color:white;">Rajamäen uusii ravintola aukeaa 13.6.2026</h2>
+
+                <h2 style="color:white;">
+                    Rajamäen uusii ravintola aukeaa 13.6.2026
+                </h2>
+
                 <h1>ONNIN PÄIVÄ</h1>
 
                 <div class="hero-sub">
-                    Ravintola &nbsp;•&nbsp; Karaoke &nbsp;•&nbsp; Yökerho &nbsp;•&nbsp; Karaoke
+                    Ravintola • Karaoke • Yökerho • Karaoke
                 </div>
 
                 <div class="hero-cats">
@@ -70,169 +148,290 @@
 
                 </div>
 
-                <div class="hero-ctas">
-                    <a href="{% url 'events' %}" class="btn btn-solid">Tapahtumat</a>
-                    <a href="{% url 'contact' %}" class="btn btn-ghost">Yhteystiedot</a>
+                <div class="hero-ctas mt-4">
+                    <a href="{% url 'events' %}" class="btn btn-solid">
+                        Tapahtumat
+                    </a>
+
+                    <a href="{% url 'contact' %}" class="btn btn-ghost">
+                        Yhteystiedot
+                    </a>
                 </div>
+
             </div>
 
-            <div class="play-wrap">
-                <button class="play-circle" aria-label="Play video">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </button>
-                <span>Video tulossa</span>
+            <div class="col-12 col-lg-4 text-center">
+
+                <div class="play-wrap">
+
+                    <button class="play-circle" aria-label="Play video">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+
+                    <span>Video tulossa</span>
+
+                </div>
+
             </div>
 
         </div>
+
     </div>
 </section>
+
 <br>
+
 <div class="container">
+
     <div class="tonight reveal">
 
         <div class="tonight-head">
+
             <h3>
                 <em class="text-neon">Tulevat tapahtumat</em>
                 <span>ravintola onnin päivä</span>
             </h3>
 
-            <a href="{% url 'events' %}" class="btn">Näytä tapahtumakalenteri</a>
-        </div>
-
-        <div class="tonight-grid">
-
-            <div class="tcard">
-                <div class="neon-ico">
-                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-                        <rect x="24" y="8" width="16" height="28" rx="8"/>
-                        <path d="M16 32a16 16 0 0 0 32 0M32 48v8M22 56h20"/>
-                    </svg>
-                </div>
-                <h4>KARAOKE ILTA</h4>
-                <div class="time">21:00</div>
-                <span class="badge"><span class="dot"></span>Lauantaina 13.6</span>
-            </div>
-
-            <div class="tcard">
-                <div class="neon-ico">
-                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
-                        <path d="M44 8l12 12-6 6-12-12zM38 14L20 32a10 10 0 1 0 12 12l18-18M26 38l4 4"/>
-                    </svg>
-                </div>
-                <h4>LIVEMUSIIKKI</h4>
-                <div class="time">Campkein klo 19:00-21:00</div>
-                <span class="badge up">Lauantaina 13.6</span>
-            </div>
-
-            <div class="tcard">
-                <div class="neon-ico">
-                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
-                        <path d="M8 36v-4a24 24 0 0 1 48 0v4"/>
-                        <rect x="8" y="36" width="12" height="16" rx="3"/>
-                        <rect x="44" y="36" width="12" height="16" rx="3"/>
-                    </svg>
-                </div>
-                <h4>TAIDENÄYTTELY</h4>
-                <div class="time">17:00</div>
-                <span class="badge up">Eemeli Ronkonen 13.6</span>
-            </div>
-
-            <div class="tcard">
-                <div class="neon-ico">
-                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
-                        <path d="M10 12h44L32 38 10 12zM32 38v16M22 54h20M40 12l8-6"/>
-                    </svg>
-                </div>
-                <h4>HAPPY HOUR</h4>
-                <div class="time">17:00 – 19:00</div>
-                <span class="badge"><span class="dot"></span>Alennusjuotavia 13.6</span>
-            </div>
+            <a href="{% url 'events' %}" class="btn">
+                Näytä tapahtumakalenteri
+            </a>
 
         </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="tcard h-100">
+
+                    <div class="neon-ico">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                            <rect x="24" y="8" width="16" height="28" rx="8"/>
+                            <path d="M16 32a16 16 0 0 0 32 0M32 48v8M22 56h20"/>
+                        </svg>
+                    </div>
+
+                    <h4>KARAOKE ILTA</h4>
+                    <div class="time">21:00</div>
+
+                    <span class="badge">
+                        <span class="dot"></span>
+                        Lauantaina 13.6
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="tcard h-100">
+
+                    <div class="neon-ico">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M44 8l12 12-6 6-12-12zM38 14L20 32a10 10 0 1 0 12 12l18-18M26 38l4 4"/>
+                        </svg>
+                    </div>
+
+                    <h4>LIVEMUSIIKKI</h4>
+
+                    <div class="time">
+                        Campkein klo 19:00-21:00
+                    </div>
+
+                    <span class="badge up">
+                        Lauantaina 13.6
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="tcard h-100">
+
+                    <div class="neon-ico">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M8 36v-4a24 24 0 0 1 48 0v4"/>
+                            <rect x="8" y="36" width="12" height="16" rx="3"/>
+                            <rect x="44" y="36" width="12" height="16" rx="3"/>
+                        </svg>
+                    </div>
+
+                    <h4>TAIDENÄYTTELY</h4>
+                    <div class="time">17:00</div>
+
+                    <span class="badge up">
+                        Eemeli Ronkonen 13.6
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="tcard h-100">
+
+                    <div class="neon-ico">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M10 12h44L32 38 10 12zM32 38v16M22 54h20M40 12l8-6"/>
+                        </svg>
+                    </div>
+
+                    <h4>HAPPY HOUR</h4>
+
+                    <div class="time">
+                        17:00 – 19:00
+                    </div>
+
+                    <span class="badge">
+                        <span class="dot"></span>
+                        Alennusjuotavia 13.6
+                    </span>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
 </div>
+
 <br>
+
 <section class="container reveal">
+
     <div class="section-head">
-        <h2>AJANKOHTAISTA <em>RAJAMÄELLE</em></h2>
-        <a href="{% url 'blog' %}" class="btn">Katso kaikki</a>
-    </div>
 
-    <div class="cards-3">
+        <h2>
+            AJANKOHTAISTA <em>RAJAMÄELLE</em>
+        </h2>
 
-        <article class="ncard">
-            <div class="thumb">
-                <img src="{% static 'images/blog-mic.jpg' %}" alt="">
-            </div>
-            <div class="body">
-                <h4>Karaoke joka viikonloppu!</h4>
-                <p>Joka Perjantai ja Lauantai</p>
-                <div class="meta">Ravintola Onnin Päivä 13.6.2026</div>
-            </div>
-        </article>
-
-        <article class="ncard">
-            <div class="thumb">
-                <img class="campkein-img" src="{% static 'images/Campkein.jpg' %}" alt="">
-            </div>
-            <div class="body">
-                <h4>Livemusiikkia terassilla</h4>
-                <p>Campkein esiintyy terassilla 13.6.2026 klo 19.00</p>
-                <div class="meta">Ravintola Onnin Päivä 13.6.2026</div>
-            </div>
-        </article>
-
-        <article class="ncard">
-            <div class="thumb">
-                <img src="{% static 'images/eemeli.jpg' %}" alt="">
-            </div>
-            <div class="body">
-                <h4>Taidenäyttely avajaispäivänä</h4>
-                <p>Eemeli Ronkonen 13.6.2026 klo 17.00</p>
-                <div class="meta">Ravintola Onnin Päivä 13.6.2026</div>
-            </div>
-        </article>
+        <a href="{% url 'blog' %}" class="btn">
+            Katso kaikki
+        </a>
 
     </div>
+
+    <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <article class="ncard h-100">
+
+                <div class="thumb">
+                    <img src="{% static 'images/blog-mic.jpg' %}" class="img-fluid" alt="">
+                </div>
+
+                <div class="body">
+                    <h4>Karaoke joka viikonloppu!</h4>
+                    <p>Joka Perjantai ja Lauantai</p>
+                    <div class="meta">Ravintola Onnin Päivä 13.6.2026</div>
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <article class="ncard h-100">
+
+                <div class="thumb">
+                    <img class="campkein-img img-fluid" src="{% static 'images/Campkein.jpg' %}" alt="">
+                </div>
+
+                <div class="body">
+                    <h4>Livemusiikkia terassilla</h4>
+                    <p>Campkein esiintyy terassilla 13.6.2026 klo 19.00</p>
+                    <div class="meta">Ravintola Onnin Päivä 13.6.2026</div>
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <article class="ncard h-100">
+
+                <div class="thumb">
+                    <img src="{% static 'images/eemeli.jpg' %}" class="img-fluid" alt="">
+                </div>
+
+                <div class="body">
+                    <h4>Taidenäyttely avajaispäivänä</h4>
+                    <p>Eemeli Ronkonen 13.6.2026 klo 17.00</p>
+                    <div class="meta">Ravintola Onnin Päivä 13.6.2026</div>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
 </section>
+
 <br>
+
 <section class="container reveal">
+
     <div class="section-head">
         <h2>ASIAKKAIDEN <em>ARVOSTELUJA</em></h2>
     </div>
 
-    <div class="reviews-grid">
-        <div class="rcard">
-            <div class="stars">★★★★★</div>
-            <p>"Tulee kyllä siisti paikka tuosta"</p>
-            <div class="who">— Niklas</div>
+    <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+
+            <div class="rcard h-100">
+                <div class="stars">★★★★★</div>
+                <p>"Tulee kyllä siisti paikka tuosta"</p>
+                <div class="who">— Niklas</div>
+            </div>
+
         </div>
 
-        <div class="rcard">
-            <div class="stars">★★★★★</div>
-            <p>"Mageeta että myös uutta ohjelmaa"</p>
-            <div class="who">— Jukka</div>
+        <div class="col-12 col-md-4">
+
+            <div class="rcard h-100">
+                <div class="stars">★★★★★</div>
+                <p>"Mageeta että myös uutta ohjelmaa"</p>
+                <div class="who">— Jukka</div>
+            </div>
+
         </div>
 
-        <div class="rcard">
-            <div class="stars">★★★★★</div>
-            <p>"Terassista tulee siisti, odotan avajaisia!"</p>
-            <div class="who">— Sanna</div>
+        <div class="col-12 col-md-4">
+
+            <div class="rcard h-100">
+                <div class="stars">★★★★★</div>
+                <p>"Terassista tulee siisti, odotan avajaisia!"</p>
+                <div class="who">— Sanna</div>
+            </div>
+
         </div>
+
     </div>
-</section>
-<br>
-<section class="container reveal">
-    <div class="visit-grid">
 
-        <div class="visit-img">
-            <img src="{% static 'images/venue-signage.png' %}" alt="Onnin Päivä signage">
+</section>
+
+<br>
+
+<section class="container reveal">
+
+    <div class="row align-items-center g-4">
+
+        <div class="col-12 col-lg-6 visit-img">
+
+            <img src="{% static 'images/venue-signage.png' %}" class="img-fluid" alt="Onnin Päivä signage">
+
         </div>
 
-        <div>
-            <div class="hero-eyebrow">TERVETULOA AVAJAISIIN!</div>
+        <div class="col-12 col-lg-6">
+
+            <div class="hero-eyebrow">
+                TERVETULOA AVAJAISIIN!
+            </div>
 
             <h2 style="font-size:42px;margin:12px 0 18px;color:#fff">
                 Ravintola <span class="text-neon">ONNIN PÄIVÄ</span>
@@ -240,23 +439,36 @@
 
             <p style="color:#cdb8bc;margin-bottom:22px">
 
-                  Ravintola Onnin Päivä avaa ovensa lauantaina 13.6.2026. Avajaispäivän ohjelmassa Campkein esiintyy terassilla klo 19.00 alkaen ja Eemeli Ronkosen taidenäyttely avautuu klo 17.00. <br><br>
+                Ravintola Onnin Päivä avaa ovensa lauantaina 13.6.2026.
+                Avajaispäivän ohjelmassa Campkein esiintyy terassilla klo 19.00
+                alkaen ja Eemeli Ronkosen taidenäyttely avautuu klo 17.00.
 
+                <br><br>
 
-              Päivän aikana luvassa on monipuolista ohjelmaa, hyvää tunnelmaa ja yhdessäoloa – lämpimästi tervetuloa viettämään avajaisia kanssamme! <br><br>
+                Päivän aikana luvassa on monipuolista ohjelmaa,
+                hyvää tunnelmaa ja yhdessäoloa – lämpimästi tervetuloa
+                viettämään avajaisia kanssamme!
 
-              Otamme vastaan pöytävarauksia terassille esiintymisen ajaksi klo 19.00–21.00. Varaukset sähköpostitse: ravintola@onninpaiva.fi <br><br>
+                <br><br>
 
+                Otamme vastaan pöytävarauksia terassille esiintymisen ajaksi
+                klo 19.00–21.00.
+
+                Varaukset sähköpostitse:
+                ravintola@onninpaiva.fi
 
             </p>
 
             <a href="{% url 'contact' %}" class="btn btn-solid">
                 Ota yhteyttä
             </a>
+
         </div>
 
     </div>
+
 </section>
+
 <br>
 
 {% endblock %}
