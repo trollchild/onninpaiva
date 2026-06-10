@@ -34,19 +34,78 @@
     }
 
     .hero-cats{
-        justify-content:center;
-        gap:12px;
-    }
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  align-items:center;
+  }
 
-    .hero-ctas{
-        display:flex;
-        flex-direction:column;
-        gap:12px;
-    }
+  @media (max-width: 768px){
 
-    .hero-ctas .btn{
-        width:100%;
-    }
+  ```
+  .hero h1{
+      font-size:42px;
+      text-align:center;
+  }
+
+  .hero h2{
+      font-size:24px;
+      text-align:center;
+  }
+
+  .hero-sub{
+      text-align:center;
+  }
+
+  .hero-eyebrow{
+      text-align:center;
+  }
+
+  .hero-cats{
+      justify-content:center;
+      gap:12px;
+  }
+
+  .hero-ctas{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+  }
+
+  .hero-ctas .btn{
+      width:100%;
+  }
+
+  .section-head{
+      flex-direction:column;
+      gap:16px;
+      text-align:center;
+  }
+
+  .tonight-head{
+      flex-direction:column;
+      gap:16px;
+      text-align:center;
+  }
+
+  .visit-img img{
+      width:100%;
+      height:auto;
+  }
+
+  .ncard img{
+      width:100%;
+      height:auto;
+  }
+
+  .play-wrap{
+      margin-top:20px;
+      text-align:center;
+  }
+  ```
+
+  }
+
 
     .section-head{
         flex-direction:column;
@@ -202,7 +261,7 @@
 
         <div class="row g-4">
 
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-6 col-sm-6 col-lg-3">
                 <div class="tcard h-100">
 
                     <div class="neon-ico">
@@ -223,7 +282,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-6 col-sm-6 col-lg-3">
                 <div class="tcard h-100">
 
                     <div class="neon-ico">
